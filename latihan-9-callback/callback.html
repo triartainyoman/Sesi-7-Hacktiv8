@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback Function - ES6</title>
+  </head>
+  <body>
+    <h1>Callback Function</h1>
+    <p>Sekuensial memanggil 2 function</p>
+    <div id="demo"></div>
+    <br />
+    <p>Teknik Callback</p>
+    <div id="demo2"></div>
+
+    <!-- Internal JS -->
+    <script>
+      // Sekuensial memanggil 2 function
+      function myDisplayer(some) {
+        document.getElementById("demo").innerHTML = some;
+      }
+
+      function myCalculator(num1, num2) {
+        let sum = num1 + num2;
+        return sum;
+      }
+
+      let result = myCalculator(5, 5);
+      myDisplayer(result);
+
+      // Callback
+      function myDisplayer2(some) {
+        document.getElementById("demo2").innerHTML = some;
+      }
+
+      function myCalculator2(num1, num2, myCallback) {
+        let sum = num1 + num2;
+        myCallback(sum);
+      }
+
+      myCalculator2(15, 5, myDisplayer2);
+    </script>
+  </body>
+</html>

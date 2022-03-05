@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises Function - ES6</title>
+  </head>
+  <body>
+    <h1>Promises Function</h1>
+    <div id="demo"></div>
+    <br />
+    <div id="demo2"></div>
+
+    <!-- Internal JS -->
+    <script>
+      // Callback Style
+      setTimeout(function () {
+        myFunction("I Love You!!!");
+      }, 3000);
+
+      function myFunction(value) {
+        document.getElementById("demo").innerHTML = value;
+      }
+
+      // Promises Style
+      let myPromise = new Promise(function (myResolve, myReject) {
+        setTimeout(function () {
+          myResolve("I Love You 3000");
+        }, 4000);
+      });
+
+      myPromise.then(function (value) {
+        document.getElementById("demo2").innerHTML = value;
+      });
+    </script>
+  </body>
+</html>

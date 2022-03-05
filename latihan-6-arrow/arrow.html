@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function - ES6</title>
+  </head>
+  <body>
+    <h1>Arrow Function in ES6</h1>
+
+    <!-- Internal JS -->
+    <script>
+      // Traditional Function
+      let a = 4;
+      let b = 2;
+      function add() {
+        return a + b + 100;
+      }
+
+      // Arrow Function
+      let c = 4;
+      let d = 2;
+      () => a + b + 100;
+
+      // Traditional Function
+      function addNew(a) {
+        return a + 100;
+      }
+
+      // Arrow Function
+
+      // Cara 1
+      (a) => {
+        return a + 100;
+      };
+
+      // Cara 2
+      (a) => a + 100;
+
+      // Cara 3
+      (a) => a + 100;
+
+      // Named Function, Stored as value
+      const tambah = (a, b) => a + b;
+    </script>
+  </body>
+</html>

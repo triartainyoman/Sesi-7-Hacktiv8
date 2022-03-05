@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array - ES6</title>
+  </head>
+  <body>
+    <h1>Array in ES6</h1>
+
+    <!-- Internal JS -->
+    <script>
+      // Deklarasi Array
+      let arr_bil = [1, 2, 3, 4, 5];
+      let arr_str = ["a", "buku", "bisa juga kalimat"];
+      let arr_bol = [true, false, true, true];
+
+      // Operasi Array - Push
+      arr_bil.push(6);
+      console.log(arr_bil);
+
+      // Operasi Array - SHIFT
+      let array1 = [1, 2, 3, 4, 5];
+      const firstElement = array1.shift();
+      console.log(array1);
+      console.log(firstElement);
+
+      // Operasi Array - UNSHIFT
+      const array2 = [6, 7, 8, 9, 10];
+      console.log(array2.unshift(11, 12));
+
+      // Operasi Array - SPLICE
+      const months = ["January", "March", "April", "June"];
+      months.splice(1, 0, "February");
+      console.log(months);
+
+      months.splice(4, 1, "Mei");
+      console.log(months);
+    </script>
+  </body>
+</html>
